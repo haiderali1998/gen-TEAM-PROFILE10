@@ -1,0 +1,30 @@
+{
+  "name": "gen-team-profile10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --verbose test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haiderali1998/gen-TEAM-PROFILE10.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haiderali1998/gen-TEAM-PROFILE10/issues"
+  },
+  "homepage": "https://github.com/haiderali1998/gen-TEAM-PROFILE10#readme",
+  "dependencies": {
+    "inquirer": "^6.3.1"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+
+}

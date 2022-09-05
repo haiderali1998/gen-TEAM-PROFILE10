@@ -1,0 +1,36 @@
+
+       body {
+           background: url(https://cdn.stocksnap.io/img-thumbs/960w/2QAM3GUJKV.jpg) center;
+           background-size: 100% 100%;
+           background-repeat: no-repeat;
+           margin: 0%;
+           height: 100vh;
+       }
+
+       .header {
+
+           border: solid rgb(248, 247, 247);
+           text-align: center;
+           font-size: 20px;
+           background-color: rgb(22, 151, 202);
+           font-family:  cursive;  
+       }
+
+       .container-body {
+           display: flex;
+           justify-content: space-evenly;
+       }
+
+       .card {
+           background-color:rgb(255, 255, 255);
+           margin-top: 4%;
+           border: solid rgb(219, 14, 14);
+           font-size: x-large;
+       }
+       .card-header{
+           margin: 10%;
+       }
+       .card-body{
+           margin: 5%;
+       }
+   
