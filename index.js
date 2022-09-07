@@ -8,6 +8,29 @@ const engineer = require("./lib/Engineer")
 const Intern = require("./lib/Intern")
 const manager = require("./lib/Manager");
 
+const writeFileAsync = util.promisify(fs.writeFile);
+const appendFileAsync = util.promisify(fs.appendFile);
+
+let teamArray = [];
+let teamString = ``;
+
+async function main() {
+    try {
+        await prompt()
+
+        for (let i = 0; i < teamArray.length; i++) {
+            teamString = teamString + html.generateCard(teamArray[i]);
+        }
+
+        let endHTML = html.generateHTML(teamString)
+
+         
+        writeFileAsync("./dist/index.html", endHTML)
+
+
+inquirer.prompt(questions).then((answers)=> {
+    console.log(answers)
+}) 
 
 const questions = [
     {
@@ -53,23 +76,4 @@ const questions = [
 
 
 
-
-
-
-
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, generateMarkdown(data), (error) => {
-        const output = (error) ? 'error' : 'success'
-        error ? console.error(error) : console.log("Your README.md has been created")
-    })
-}
-
-function init() {
-    inquirer.prompt(questions).then((answers) => {
-        const data = markdown(answers);
-        console.log(answers);
-        writeToFile("./dist/index.html", data);
-    })
-}
-
-init();
+    }
