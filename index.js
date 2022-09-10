@@ -107,13 +107,14 @@ function init(){
                 },
               
      ]).then((answers) => {
+      console.log(answers)
           if (answers.title === "Manager") {
             const manager = new Manager(answers.name, answers.id, answers.email, answers.office);
             teamArray.push(manager);
-          } else if (answers.title === "Engineer") {
+          } if (answers.title === "Engineer") {
             const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
             teamArray.push(engineer);
-          } else if (answers.title === "Intern") {
+          } if (answers.title === "Intern") {
             const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
             teamArray.push(intern);
           }

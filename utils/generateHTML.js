@@ -1,5 +1,9 @@
 function generateTeam(team){
     team = JSON.parse(team)
+    console.log(team)
+    //loop through team, and see if the object is an engineer/manager or intern
+    //if manager then call manager function etc...
+    // call subFunctions inside of return
     const manager = (managerData) => {
         return `
         <div class="card">
@@ -86,7 +90,7 @@ function generateTeam(team){
        <ul>
            <li></li>
            <li></li>
-           <li>Office Number: 12345 </li>
+           <li>Office Number: </li>
        </ul>
    </div>
         
