@@ -1,14 +1,10 @@
-function generateTeam(team){
+function generateHTML(team){
     team = JSON.parse(team)
-    console.log(team)
-    //loop through team, and see if the object is an engineer/manager or intern
-    //if manager then call manager function etc...
-    // call subFunctions inside of return
     const manager = (managerData) => {
         return `
         <div class="card">
         <div class="card-header">
-            <h2>Haider Ali</h2>  
+            <h2></h2>  
             <h2>Manager
             ${managerData.name}</h2>
             <hr>
@@ -81,7 +77,7 @@ function generateTeam(team){
    <div class="container-body">
    <div class="card">
    <div class="card-header">
-       <h2>Haider Ali</h2>  
+       <h2></h2>  
        <h2>Manager
        ${team[0].name}</h2>
        <hr>
@@ -90,7 +86,7 @@ function generateTeam(team){
        <ul>
            <li></li>
            <li></li>
-           <li>Office Number: </li>
+           <li>Office Number: 12345 </li>
        </ul>
    </div>
         
@@ -110,8 +106,8 @@ function generateTeam(team){
 </div>
 </div><div class="card">
 <div class="card-header">
-    <h2></h2>  
-    <h2><i class="far fa-user"></i> Intern</h2>
+    <h2>Intern</h2>  
+    <h2>${team[1].name}</h2>
     <hr>
 </div>
 <div class="card-body">
@@ -130,4 +126,4 @@ function generateTeam(team){
     </html>`
 }
 
-module.exports = generateTeam
+module.exports = generateHTML
